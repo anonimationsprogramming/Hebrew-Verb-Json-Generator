@@ -65,10 +65,10 @@ class VerbApp(QWidget):
         self.binyan_input = QLineEdit()
         self.translation_input = QLineEdit()
 
-        form.addRow("פועל:", self.verb_input)
-        form.addRow("שורש:", self.root_input)
-        form.addRow("בניין:", self.binyan_input)
-        form.addRow("תרגום:", self.translation_input)
+        form.addRow("פועל", self.verb_input)
+        form.addRow("שורש", self.root_input)
+        form.addRow("בניין", self.binyan_input)
+        form.addRow("תרגום", self.translation_input)
 
 
         # ---------------- TITLE ----------------
@@ -98,17 +98,14 @@ class VerbApp(QWidget):
         scroll.setWidget(container)
 
         # Add styles        
-        self.setStyleSheet("QWidget {font-family:serif; font-size: 40px; background-color: #CCFFE5; color: black;} ")
+        self.setStyleSheet("QWidget {border: 1px solid black; border-radius: 20; font-family:serif; font-size: 40px; background-color: white; color: black;} ")
         title.setStyleSheet("QLabel{font-family:serif; font-size: 60px; color: black; font-weight: bold;} ")
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        button.setStyleSheet("QPushButton{font-family:serif; font-size: 40px; background-color: #0080FF; color: black; font-weight: bold; min-width: 100px; max-width: 100px;} ")
+        button.setStyleSheet("QPushButton{font-family:serif; font-size: 40px; background-color: black; color: white; font-weight: bold; min-width: 100px; max-width: 100px;} ")
         present.setStyleSheet("QLabel{font-family:serif; font-size: 45px; color: black; font-weight: bold;} ")
         past.setStyleSheet("QLabel{font-family:serif; font-size: 45px; color: black; font-weight: bold;} ")
         future.setStyleSheet("QLabel{font-family:serif; font-size: 45px; color: black; font-weight: bold;} ")
-        self.verb_input.setAlignment(Qt.AlignmentFlag.AlignRight)
-        self.root_input.setAlignment(Qt.AlignmentFlag.AlignRight)
-        self.binyan_input.setAlignment(Qt.AlignmentFlag.AlignRight)
-        self.translation_input.setAlignment(Qt.AlignmentFlag.AlignRight)
+
 
 
         # add scroll to window
